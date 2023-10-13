@@ -50,6 +50,7 @@
 		8487B7D22A715BDA00C59887 /* WorkOutModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8487B7D12A715BD900C59887 /* WorkOutModel.swift */; };
 		8487B7D72A715E0D00C59887 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8487B7D62A715E0D00C59887 /* HomeViewController.swift */; };
 		8487B7DC2A7295D500C59887 /* HomeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8487B7DB2A7295D300C59887 /* HomeManager.swift */; };
+		8487B7EC2A7CC76E00C59887 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8487B7EB2A7CC76D00C59887 /* TabBarViewController.swift */; };
 		849C6EC12A49E257004A465B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849C6EC02A49E257004A465B /* AppDelegate.swift */; };
 		849C6EC32A49E257004A465B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849C6EC22A49E257004A465B /* SceneDelegate.swift */; };
 		849C6EC52A49E257004A465B /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849C6EC42A49E257004A465B /* WelcomeViewController.swift */; };
@@ -106,6 +107,7 @@
 		8487B7D12A715BD900C59887 /* WorkOutModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkOutModel.swift; sourceTree = "<group>"; };
 		8487B7D62A715E0D00C59887 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		8487B7DB2A7295D300C59887 /* HomeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeManager.swift; sourceTree = "<group>"; };
+		8487B7EB2A7CC76D00C59887 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		849C6EBD2A49E257004A465B /* OnlineFitnessTrainerApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OnlineFitnessTrainerApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		849C6EC02A49E257004A465B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		849C6EC22A49E257004A465B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -477,6 +479,14 @@
 			path = HomeViewModelManager;
 			sourceTree = "<group>";
 		};
+		8487B7EA2A7CC73900C59887 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				8487B7EB2A7CC76D00C59887 /* TabBarViewController.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
 		849C6EB42A49E257004A465B = {
 			isa = PBXGroup;
 			children = (
@@ -534,7 +544,7 @@
 		849C6ED72A49E41A004A465B /* View */ = {
 			isa = PBXGroup;
 			children = (
-				8487B7D52A715DF100C59887 /* Home */,
+				8487B7EA2A7CC73900C59887 /* TabBar */,
 				849C6ED92A49E443004A465B /* Weclome */,
 				84680C142A4B177B00BC05F6 /* MainPage */,
 				84680C322A4D8E0000BC05F6 /* Gender */,
@@ -547,6 +557,7 @@
 				84680CDF2A60541F00BC05F6 /* GetIn */,
 				84680CF02A6414ED00BC05F6 /* LogIn */,
 				84680CFF2A66C89300BC05F6 /* SignUp */,
+				8487B7D52A715DF100C59887 /* Home */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -716,6 +727,7 @@
 			files = (
 				84680CE62A60548600BC05F6 /* GetInView.swift in Sources */,
 				8487B7D22A715BDA00C59887 /* WorkOutModel.swift in Sources */,
+				8487B7EC2A7CC76E00C59887 /* TabBarViewController.swift in Sources */,
 				84680C9D2A54426500BC05F6 /* ActivityViewController.swift in Sources */,
 				84680CA92A56D43000BC05F6 /* ProfileView.swift in Sources */,
 				84680CE12A60545A00BC05F6 /* GetInViewController.swift in Sources */,

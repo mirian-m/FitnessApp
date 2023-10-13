@@ -32,15 +32,6 @@ final class PageViewController: UIViewController {
         } completion: { _ in
             (self.view as! PageView).updateViewComponents(with: pageViewModel)
         }
-        
-        //        UIView.animate(withDuration: 1, delay: 0.3, options: [.curveEaseIn]) {
-        ////                    self.view.alpha = 0.1
-        //                } completion: { _ in
-        //                    UIView.animate(withDuration: 1, animations: {
-        ////                        self.view.alpha = 1
-        //                         (self.view as! PageView).updateViewComponents(with: pageViewModel)
-        //                    }, completion: nil)
-        //                }
     }
 }
 // MARK:- Extension

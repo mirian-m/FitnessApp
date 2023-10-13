@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 
-final class LogInViewModelManager: GetInProtocol {
+final class LogInViewModelManager: LogInProtocol {
     public var error: ObservableObject<String> = ObservableObject("")
     
     func logInWith(email: String, password: String) {

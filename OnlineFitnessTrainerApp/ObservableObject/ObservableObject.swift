@@ -1,4 +1,3 @@
-//
 //  ObservablaObject.swift
 //  OnlineFitnessTrainerApp
 //

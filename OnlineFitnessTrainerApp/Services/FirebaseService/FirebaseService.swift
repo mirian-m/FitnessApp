@@ -10,6 +10,7 @@ import FirebaseAuth
 import FirebaseFirestore
 
 final class FirebaseService {
+    
     // MARK:- Shared property
     static let shared = FirebaseService()
     // MARK:- Private Property

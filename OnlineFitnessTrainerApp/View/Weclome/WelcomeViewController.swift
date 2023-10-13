@@ -19,7 +19,7 @@ final class WelcomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) { [weak self] in
-            self?.navigationController?.pushViewController(HomeViewController(), animated: false)
+            self?.navigationController?.pushViewController(PageViewController(), animated: false)
         }
     }
 }

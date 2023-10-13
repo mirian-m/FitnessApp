@@ -7,7 +7,7 @@
 
 import Foundation
 
-final class SignUpViewModelManager: GetInProtocol {
+final class SignUpViewModelManager: LogInProtocol {
     public var error: ObservableObject<String> = ObservableObject("")
     
     func signUpWith(email: String, password: String) {

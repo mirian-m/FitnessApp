@@ -13,7 +13,7 @@ final class GoalViewController: UserInfoViewController {
     
     // MARK:- Private outlets
     private var goalTableView: UITableView = {
-       let tableView = UITableView()
+        let tableView = UITableView()
         tableView.separatorStyle = .none
         tableView.showsVerticalScrollIndicator = false
         tableView.backgroundColor = .clear
@@ -35,18 +35,18 @@ final class GoalViewController: UserInfoViewController {
                    myCustomView: self.goalTableView
         )
     }
-
+    
     required convenience init?(coder: NSCoder) {
         self.init()
     }
     
     // MARK:- Private Methods
     private func binder() {
-         manager.goalsSelection.bind { _ in
-             self.goalTableView.reloadData()
-         }
-     }
-
+        manager.goalsSelection.bind { _ in
+            self.goalTableView.reloadData()
+        }
+    }
+    
     // MARK:- Override Method
     override func buttonPressd(_ sender: UIButton?) {
         switch sender?.currentTitle {
@@ -72,7 +72,7 @@ extension GoalViewController: UITableViewDataSource, UITableViewDelegate {
         //  Create reusable cell
         guard let cell = tableView.dequeueReusableCell(withIdentifier: GoalTableViewCell.identifier, for: indexPath) as? GoalTableViewCell else { return UITableViewCell()}
         
-        //  Update Cell metod
+        //  Update Cell method
         cell.updateCell(with: manager.getDataAt(index: indexPath.row),
                         isChecked: manager.goalsSelection.value?[indexPath.row] ?? false)
         

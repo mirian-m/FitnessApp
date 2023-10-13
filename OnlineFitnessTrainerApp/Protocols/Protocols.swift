@@ -30,12 +30,12 @@ protocol UpdatebleProtocol {
     func updatePicture(_ picture: Data)
 }
 
-@objc protocol GetInProtocol {
+@objc protocol LogInProtocol {
     @objc optional func logInWith(email: String, password: String)
     @objc optional func signUpWith(email: String, password: String)
 }
 
-extension GetInProtocol {
+extension LogInProtocol {
     func logInWithFacebook() { print("FaceBook log in") }
     func logInWithGoogle() { print("Google log in") }
     func logInWithApple() { print("App log in") }

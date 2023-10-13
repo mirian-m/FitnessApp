@@ -7,14 +7,16 @@
 
 import UIKit
 
-class HomeViewController: UIViewController {
+final class HomeViewController: UIViewController {
     private var manager = HomeManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = Const.Colors.backgroundColorDark
         bind()
         manager.fetchData()
     }
+    
     func bind() {
         manager.workOuts.bind { workOutPlan in
             print(workOutPlan?.first?.difficulty! ?? "")
