@@ -13,6 +13,7 @@ UIKit: UIKit framework is used for building the user interface components.
 Fire Base: Fire base is utilized for managing and persisting user data, such as profiles, workout plans, and progress tracking.
 
 How to Use:
+
 Clone the repository to your local machine.
 Open the Xcode project.
 Build and run the app on your desired iOS simulator or device.
