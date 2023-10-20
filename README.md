@@ -15,6 +15,9 @@ Fire Base: Fire base is utilized for managing and persisting user data, such as 
 How to Use:
 
 Clone the repository to your local machine.
+
 Open the Xcode project.
+
 Build and run the app on your desired iOS simulator or device.
+
 Explore the app's intuitive user interface to set fitness goals, track progress, and view workout routines.
