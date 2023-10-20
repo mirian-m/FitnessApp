@@ -7,5 +7,7 @@ The Fitness App for iOS is a dynamic and user-centric mobile application designe
 Technologies Used:
 
 Swift: The app is developed entirely using the Swift programming language.
+
 UIKit: UIKit framework is used for building the user interface components.
+
 Fire Base: Fire base is utilized for managing and persisting user data, such as profiles, workout plans, and progress tracking.
