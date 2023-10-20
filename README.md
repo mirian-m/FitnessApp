@@ -2,7 +2,9 @@
 
 Overview:
 
-The Fitness App for iOS is a dynamic and user-centric mobile application designed to help individuals achieve their fitness goals. The app is built using the MVVM (Model-View-ViewModel) architectural pattern, which provides a structured and organized approach to managing the application's logic, user interface, and data flow. With MVVM, the app separates concerns, making it easier to maintain, test, and extend.
+The Fitness App for iOS is a dynamic and user-centric mobile application designed to help individuals achieve their fitness goals. 
+The app is built using the MVVM (Model-View-ViewModel) architectural pattern, which provides a structured and organized approach to managing the application's logic, 
+user interface, and data flow. With MVVM, the app separates concerns, making it easier to maintain, test, and extend.
 
 
 Technologies Used:
