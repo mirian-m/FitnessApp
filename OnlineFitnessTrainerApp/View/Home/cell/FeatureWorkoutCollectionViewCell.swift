@@ -75,11 +75,8 @@ final class FeatureWorkoutCollectionViewCell: UICollectionViewCell {
         addSubview(btn)
         return btn
     }()
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        adjustConstraints()
-    }
     
+    // MARK:- life Cycle methods
     override init(frame: CGRect) {
         super.init(frame: frame)
         workoutImageView.backgroundColor = .clear
@@ -87,6 +84,11 @@ final class FeatureWorkoutCollectionViewCell: UICollectionViewCell {
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        adjustConstraints()
     }
 }
 

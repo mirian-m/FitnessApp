@@ -7,13 +7,9 @@
 
 import UIKit
 
-final class TabBarViewController: UITabBarController, UITabBarControllerDelegate {
+final class TabBarViewController: UITabBarController {
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        delegate = self
-    }
-    
+    // MARK:- Life Cycle Method
     override func viewWillAppear(_ animated: Bool) {
         super .viewWillAppear(true)
         congfiguration()
@@ -59,13 +55,6 @@ extension TabBarViewController {
             image: Const.Icon.homeIcon.withTintColor(.gray, renderingMode: .alwaysOriginal),
             selectedImage: Const.Icon.homeFillIcon.withRenderingMode(.alwaysOriginal).withTintColor(.white, renderingMode: .alwaysOriginal)
         )
-        
-//        let vc1 = GoalViewController()
-//        vc1.tabBarItem = UITabBarItem(
-//            title: "",
-//            image: UIImage(systemName: "square.and.arrow.up")?.withTintColor(.black, renderingMode: .alwaysOriginal),
-//            selectedImage: UIImage(systemName: "square.and.arrow.up.fill")
-//        )
         self.setViewControllers([vc], animated: true)
     }
     
