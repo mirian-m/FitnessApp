@@ -58,6 +58,7 @@
 		849C6ECA2A49E263004A465B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 849C6EC92A49E263004A465B /* Assets.xcassets */; };
 		849C6EDE2A49E4B8004A465B /* WelcomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849C6EDD2A49E4B8004A465B /* WelcomView.swift */; };
 		849C6EE72A4AF9A6004A465B /* Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 849C6EE62A4AF9A6004A465B /* Screen.storyboard */; };
+		84B98C002AE3DAE800A58AB7 /* FeatureWorkoutCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B98BFF2AE3DAE800A58AB7 /* FeatureWorkoutCollectionViewCell.swift */; };
 		E3D7AE96F3FFF64211A61CD7 /* Pods_OnlineFitnessTrainerApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1642166A91F20E737522B1C0 /* Pods_OnlineFitnessTrainerApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -117,6 +118,7 @@
 		849C6ECE2A49E263004A465B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		849C6EDD2A49E4B8004A465B /* WelcomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomView.swift; sourceTree = "<group>"; };
 		849C6EE62A4AF9A6004A465B /* Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Screen.storyboard; sourceTree = "<group>"; };
+		84B98BFF2AE3DAE800A58AB7 /* FeatureWorkoutCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureWorkoutCollectionViewCell.swift; sourceTree = "<group>"; };
 		CAF1A7BC75E368DD3C1C2FC7 /* Pods-OnlineFitnessTrainerApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OnlineFitnessTrainerApp.release.xcconfig"; path = "Target Support Files/Pods-OnlineFitnessTrainerApp/Pods-OnlineFitnessTrainerApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -466,6 +468,7 @@
 		8487B7D52A715DF100C59887 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				84B98BFD2AE3D7EC00A58AB7 /* cell */,
 				8487B7D62A715E0D00C59887 /* HomeViewController.swift */,
 			);
 			path = Home;
@@ -591,6 +594,14 @@
 				849C6EDD2A49E4B8004A465B /* WelcomView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		84B98BFD2AE3D7EC00A58AB7 /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				84B98BFF2AE3DAE800A58AB7 /* FeatureWorkoutCollectionViewCell.swift */,
+			);
+			path = cell;
 			sourceTree = "<group>";
 		};
 		C9E4456A89C775CA0CE8868C /* Pods */ = {
@@ -756,6 +767,7 @@
 				84680CED2A630D1800BC05F6 /* GetInWith.swift in Sources */,
 				84680C402A4D965E00BC05F6 /* Extensions.swift in Sources */,
 				84680CCE2A5ED97700BC05F6 /* ProfileModel.swift in Sources */,
+				84B98C002AE3DAE800A58AB7 /* FeatureWorkoutCollectionViewCell.swift in Sources */,
 				84680CAD2A56DB4000BC05F6 /* ProfileViewController.swift in Sources */,
 				84680C562A4EF5BB00BC05F6 /* CustomView.swift in Sources */,
 				84680D012A66C8CB00BC05F6 /* SignUpViewController.swift in Sources */,

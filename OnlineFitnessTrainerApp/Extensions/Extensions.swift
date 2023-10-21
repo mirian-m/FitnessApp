@@ -135,6 +135,7 @@ extension UIButton {
         titleEdgeInsets = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 0)
         contentHorizontalAlignment = .center
         imageView?.contentMode = .scaleAspectFill
+        self.titleLabel?.adjustsFontSizeToFitWidth = true
     }
 }
 

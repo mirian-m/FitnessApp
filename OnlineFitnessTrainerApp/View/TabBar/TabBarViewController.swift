@@ -18,7 +18,6 @@ final class TabBarViewController: UITabBarController, UITabBarControllerDelegate
         super .viewWillAppear(true)
         congfiguration()
     }
-    
 }
 
 extension TabBarViewController {
@@ -32,12 +31,25 @@ extension TabBarViewController {
         navigationController?.navigationBar.isHidden = false
         self.navigationItem.setHidesBackButton(true, animated: true)
         navigationController?.navigationBar.barTintColor = .clear
-        
-        let image = Const.Icon.goFitLogo
+        let image = Const.Icon.goFitIcon
         let customBtn = UIButton()
-        customBtn.setImage(image, for: .normal)
+        customBtn.buttonSet(image, "GoFit")
         let btn = UIBarButtonItem(customView: customBtn)
         navigationItem.setLeftBarButton(btn, animated: true)
+        navigationItem.setRightBarButtonItems([
+            UIBarButtonItem(image: Const.Icon.bookmarkIcon
+                                .withConfiguration(UIImage.SymbolConfiguration(pointSize: 13))
+                                .withTintColor(.white, renderingMode: .alwaysOriginal),
+                            style: .done, target: self, action: nil),
+            
+            UIBarButtonItem(image: Const.Icon.bellIcon
+                                .withConfiguration(UIImage.SymbolConfiguration(pointSize: 13))
+                                .withTintColor(.white, renderingMode: .alwaysOriginal),
+                            style: .done, target: self, action: nil)
+        ], animated: true)
+        
+        title = "Good Morning 👋"
+        
     }
     
     private func addViewControllersToTabbar() {
@@ -48,14 +60,13 @@ extension TabBarViewController {
             selectedImage: Const.Icon.homeFillIcon.withRenderingMode(.alwaysOriginal).withTintColor(.white, renderingMode: .alwaysOriginal)
         )
         
-        let vc1 = GoalViewController()
-        vc1.tabBarItem = UITabBarItem(
-            title: "",
-            image: UIImage(systemName: "square.and.arrow.up")?.withTintColor(.black, renderingMode: .alwaysOriginal),
-            selectedImage: UIImage(systemName: "square.and.arrow.up.fill")
-        )
-        
-        self.setViewControllers([vc, vc1], animated: true)
+//        let vc1 = GoalViewController()
+//        vc1.tabBarItem = UITabBarItem(
+//            title: "",
+//            image: UIImage(systemName: "square.and.arrow.up")?.withTintColor(.black, renderingMode: .alwaysOriginal),
+//            selectedImage: UIImage(systemName: "square.and.arrow.up.fill")
+//        )
+        self.setViewControllers([vc], animated: true)
     }
     
 }

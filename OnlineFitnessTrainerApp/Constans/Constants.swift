@@ -38,7 +38,11 @@ enum Const {
         static let showPasswordIcon = UIImage(systemName: "eye.fill") ?? UIImage()
         static let homeIcon = UIImage(systemName: "house") ?? UIImage()
         static let homeFillIcon = UIImage(systemName: "house.fill") ?? UIImage()
-        static let goFitLogo = UIImage(named: "gofitLogo") ?? UIImage()
+        static let goFitIcon = UIImage(named: "hantel") ?? UIImage()
+        static let bellIcon = UIImage(systemName: "bell") ?? UIImage()
+        static let bellFillIcon = UIImage(systemName: "bell.fill") ?? UIImage()
+        static let bookmarkIcon = UIImage(systemName: "bookmark") ?? UIImage()
+        static let bookmarkFillIcon = UIImage(systemName: "bookmark.fill") ?? UIImage()
     }
     enum Radius {
         static let circleRadius: CGFloat = 70
