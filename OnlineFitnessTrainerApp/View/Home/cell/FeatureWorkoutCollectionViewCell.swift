@@ -75,7 +75,6 @@ final class FeatureWorkoutCollectionViewCell: UICollectionViewCell {
         addSubview(btn)
         return btn
     }()
-    
     override func layoutSubviews() {
         super.layoutSubviews()
         adjustConstraints()
