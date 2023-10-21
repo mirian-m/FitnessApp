@@ -94,7 +94,7 @@ extension ProfileView {
                                                              ]
         )
         textField.backgroundColor = Const.Colors.backgroundColorLightDark
-        textField.textColor = Const.Colors.tintColorWight
+        textField.textColor = Const.Colors.tintColorWhite
         textField.font = UIFont.systemFont(ofSize: 13)
         textField.layer.cornerRadius = Const.Radius.cornerRadiusForButton
         return textField

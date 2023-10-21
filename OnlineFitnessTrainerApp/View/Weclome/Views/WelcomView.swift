@@ -51,7 +51,7 @@ final class WelcomView: UIView {
         lb.numberOfLines = 0
         lb.text = "The best fitness App in this country to accompany your sports"
         lb.font = Const.Fonts.subTitle
-        lb.textColor = Const.Colors.tintColorWight
+        lb.textColor = Const.Colors.tintColorWhite
         return lb
     }()
     

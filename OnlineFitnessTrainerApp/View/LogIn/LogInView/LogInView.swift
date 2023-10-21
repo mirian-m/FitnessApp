@@ -30,7 +30,7 @@ class LogInView: UIView {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textAlignment = .center
         label.font = Const.Fonts.title
-        label.textColor = Const.Colors.tintColorWight
+        label.textColor = Const.Colors.tintColorWhite
         label.text = viewTitle
         label.numberOfLines = 0
         label.textAlignment = .left
@@ -161,7 +161,7 @@ class LogInView: UIView {
         lb.translatesAutoresizingMaskIntoConstraints = false
         lb.text = "or continue with"
         lb.font = Const.Fonts.subTitle
-        lb.textColor = Const.Colors.tintColorWight
+        lb.textColor = Const.Colors.tintColorWhite
         separatorView.addSubview(lb)
         return lb
     }()

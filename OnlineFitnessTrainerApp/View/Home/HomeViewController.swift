@@ -8,17 +8,22 @@
 import UIKit
 
 final class HomeViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
-    private let heightConst = 200
+    private let heightConst = 220
     private var manager = HomeManager()
     
     private lazy var featureWorkoutCollectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.itemSize = CGSize(width: Int(view.frame.width), height: heightConst)
         layout.scrollDirection = .horizontal
-        let collectionView = UICollectionView(frame: CGRect(x: 0, y: 0, width: Int(view.frame.width), height: heightConst), collectionViewLayout: layout)
+        let collectionView = UICollectionView(
+            frame: CGRect(x: 0, y: 0, width: Int(view.frame.width), height: heightConst),
+            collectionViewLayout: layout
+        )
         
         collectionView.showsVerticalScrollIndicator = true
-        collectionView.register(FeatureWorkoutCollectionViewCell.self, forCellWithReuseIdentifier: FeatureWorkoutCollectionViewCell.identifier)
+        collectionView.register(FeatureWorkoutCollectionViewCell.self,
+                                forCellWithReuseIdentifier: FeatureWorkoutCollectionViewCell.identifier)
+        
         collectionView.center = view.center
         collectionView.backgroundColor = .clear
         view.addSubview(collectionView)

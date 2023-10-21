@@ -113,7 +113,7 @@ extension ActivityViewController {
         let btn = UIButton()
         btn.setTitle(title, for: .normal)
         btn.backgroundColor = Const.Colors.backgroundColorLightDark
-        btn.tintColor = Const.Colors.tintColorWight
+        btn.tintColor = Const.Colors.tintColorWhite
         btn.layer.borderWidth = 1
         btn.layer.cornerRadius = Const.Radius.cornerRadiusForButton
         btn.layer.borderColor = UIColor.clear.cgColor

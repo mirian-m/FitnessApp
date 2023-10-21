@@ -15,7 +15,7 @@ final class CustomView: UIView {
     private lazy var titleLb: UILabel = {
         let lb = UILabel()
         lb.font = Const.Fonts.title
-        lb.textColor = Const.Colors.tintColorWight
+        lb.textColor = Const.Colors.tintColorWhite
         lb.adjustsFontSizeToFitWidth = true
         lb.minimumScaleFactor = 0.7
         lb.textAlignment = .center
@@ -135,7 +135,7 @@ extension CustomView {
     private func createButtonWith(title: String) -> UIButton {
         let btn = UIButton()
         btn.backgroundColor = Const.Colors.highlightBackgroundColor
-        btn.tintColor = Const.Colors.tintColorWight
+        btn.tintColor = Const.Colors.tintColorWhite
         btn.setTitle(title, for: .normal)
         btn.layer.cornerRadius = Const.Radius.cornerRadiusForButton
         btn.addTarget(self, action: #selector(buttonPressd), for: .touchUpInside)

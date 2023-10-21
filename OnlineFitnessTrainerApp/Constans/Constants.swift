@@ -17,7 +17,7 @@ enum Const {
     enum Colors {
         static let highlightBackgroundColor = #colorLiteral(red: 0.4064723253, green: 0.2563842833, blue: 1, alpha: 1)
         static let backgroundColorDark = #colorLiteral(red: 0.09379886836, green: 0.10151539, blue: 0.1264217198, alpha: 1)
-        static let tintColorWight = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        static let tintColorWhite = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
         static let tintColorGray = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
         static let tintColorHighlight = #colorLiteral(red: 0.4064723253, green: 0.2563842833, blue: 1, alpha: 1)
         static let backgroundColorLightDark = #colorLiteral(red: 0.2073960006, green: 0.2191228569, blue: 0.2481985986, alpha: 1).withAlphaComponent(0.5)

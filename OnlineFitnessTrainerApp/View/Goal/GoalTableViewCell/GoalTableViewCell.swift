@@ -15,7 +15,7 @@ final class GoalTableViewCell: UITableViewCell {
     private lazy var goalLb: UILabel = {
        let lb = UILabel()
         lb.translatesAutoresizingMaskIntoConstraints = false
-        lb.textColor = Const.Colors.tintColorWight
+        lb.textColor = Const.Colors.tintColorWhite
         lb.font = UIFont.systemFont(ofSize: 14)
         lb.text = "LABEL TEXT"
         return lb

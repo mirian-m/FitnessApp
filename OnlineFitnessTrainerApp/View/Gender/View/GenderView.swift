@@ -15,7 +15,7 @@ final class GenderView: UIView {
     private lazy var title: UILabel = {
         let lb = UILabel()
         lb.font = Const.Fonts.title
-        lb.textColor = Const.Colors.tintColorWight
+        lb.textColor = Const.Colors.tintColorWhite
         lb.text = "Tell Us About Yourself"
         lb.textAlignment = .center
         return lb
@@ -82,7 +82,7 @@ final class GenderView: UIView {
         btn.layer.cornerRadius = 20
         btn.backgroundColor = Const.Colors.highlightBackgroundColor
         btn.setTitle("Continue", for: .normal)
-        btn.tintColor = Const.Colors.tintColorWight
+        btn.tintColor = Const.Colors.tintColorWhite
         btn.tag = 2
         self.addSubview(btn)
         btn.addTarget(self, action: #selector(buttonPressd), for: .touchUpInside)
@@ -127,7 +127,7 @@ final class GenderView: UIView {
         view.isUserInteractionEnabled = false
         let label = UILabel()
         label.text = title
-        label.textColor = Const.Colors.tintColorWight
+        label.textColor = Const.Colors.tintColorWhite
         let imageView = UIImageView()
         imageView.image = image.withTintColor(.white)
         imageView.contentMode = .center

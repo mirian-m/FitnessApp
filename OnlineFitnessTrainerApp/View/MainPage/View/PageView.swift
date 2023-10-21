@@ -47,7 +47,7 @@ final class PageView: UIView {
         lb.font = Const.Fonts.title
         lb.adjustsFontSizeToFitWidth = true
         lb.minimumScaleFactor = 0.6
-        lb.textColor = Const.Colors.tintColorWight
+        lb.textColor = Const.Colors.tintColorWhite
         lb.textAlignment = .center
         return lb
     }()
@@ -57,7 +57,7 @@ final class PageView: UIView {
         btn.layer.cornerRadius = 20
         btn.backgroundColor = Const.Colors.highlightBackgroundColor
         btn.setTitle("Next", for: .normal)
-        btn.tintColor = Const.Colors.tintColorWight
+        btn.tintColor = Const.Colors.tintColorWhite
         btn.addTarget(self, action: #selector(buttonClicked), for: .touchUpInside)
         return btn
     }()

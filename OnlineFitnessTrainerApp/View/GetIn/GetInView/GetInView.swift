@@ -17,7 +17,7 @@ final class GetInView: UIView {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textAlignment = .center
         label.font = Const.Fonts.title
-        label.textColor = Const.Colors.tintColorWight
+        label.textColor = Const.Colors.tintColorWhite
         label.text = "Let's you in"
         label.minimumScaleFactor = 0.9
         addSubview(label)
@@ -31,7 +31,7 @@ final class GetInView: UIView {
         btn.addTarget(self, action: #selector(accountButtonPressd), for: .touchUpInside)
         btn.buttonSet(Const.Icon.facebookIcon, "Continue with Facebook")
         btn.backgroundColor = Const.Colors.backgroundColorLightDark
-        btn.tintColor = Const.Colors.tintColorWight
+        btn.tintColor = Const.Colors.tintColorWhite
         btn.titleLabel?.font = Const.Fonts.subTitle
         btn.layer.cornerRadius = Const.Radius.cornerRadiusForButton
 
@@ -45,7 +45,7 @@ final class GetInView: UIView {
         btn.addTarget(self, action: #selector(accountButtonPressd), for: .touchUpInside)
         btn.buttonSet(Const.Icon.googleIcon, "Continue with Google")
         btn.backgroundColor = Const.Colors.backgroundColorLightDark
-        btn.tintColor = Const.Colors.tintColorWight
+        btn.tintColor = Const.Colors.tintColorWhite
         btn.titleLabel?.font = Const.Fonts.subTitle
         btn.layer.cornerRadius = Const.Radius.cornerRadiusForButton
         return btn
@@ -58,7 +58,7 @@ final class GetInView: UIView {
         btn.addTarget(self, action: #selector(accountButtonPressd), for: .touchUpInside)
         btn.buttonSet(Const.Icon.appleIcon, "Continue with Apple")
         btn.backgroundColor = Const.Colors.backgroundColorLightDark
-        btn.tintColor = Const.Colors.tintColorWight
+        btn.tintColor = Const.Colors.tintColorWhite
         btn.titleLabel?.font = Const.Fonts.subTitle
         btn.layer.cornerRadius = Const.Radius.cornerRadiusForButton
         return btn
@@ -115,7 +115,7 @@ final class GetInView: UIView {
         lb.translatesAutoresizingMaskIntoConstraints = false
         lb.text = "or"
         lb.font = Const.Fonts.subTitle
-        lb.textColor = Const.Colors.tintColorWight
+        lb.textColor = Const.Colors.tintColorWhite
         separatorView.addSubview(lb)
         return lb
     }()

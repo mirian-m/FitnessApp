@@ -40,7 +40,7 @@ extension UserInfoViewController: UIPickerViewDelegate {
             itemsDesign.color = Const.Colors.highlightBackgroundColor
             itemsDesign.font = UIFont(name: "HelveticaNeue-Bold", size: 35)!
         } else {
-            itemsDesign.color = Const.Colors.tintColorWight
+            itemsDesign.color = Const.Colors.tintColorWhite
             itemsDesign.font = UIFont(name: "HelveticaNeue-Bold", size: 20)!
         }
         return itemsDesign
