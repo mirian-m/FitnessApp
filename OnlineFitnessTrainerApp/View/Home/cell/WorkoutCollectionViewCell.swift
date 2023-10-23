@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class FeatureWorkoutCollectionViewCell: UICollectionViewCell {
+final class WorkoutCollectionViewCell: UICollectionViewCell {
     static var identifier: String { .init(describing: self) }
     
     // MARK:- Outlets
@@ -17,7 +17,7 @@ final class FeatureWorkoutCollectionViewCell: UICollectionViewCell {
         imageView.clipsToBounds = true
         imageView.image = UIImage(named: "Page3")
         imageView.contentMode = .scaleAspectFill
-        imageView.layer.cornerRadius = 10
+        imageView.layer.cornerRadius = 20
         addSubview(imageView)
         return imageView
     }()
@@ -93,7 +93,7 @@ final class FeatureWorkoutCollectionViewCell: UICollectionViewCell {
 }
 
 // MARK:- Extension For constraints
-extension FeatureWorkoutCollectionViewCell {
+extension WorkoutCollectionViewCell {
     
     private func adjustConstraints() {
         let workoutImageViewConstraints = [

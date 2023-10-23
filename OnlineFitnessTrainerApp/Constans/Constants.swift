@@ -9,6 +9,10 @@ import Foundation
 import UIKit
 
 enum Const {
+    enum FontFemily {
+        static let helvetica = "HelveticaNeue"
+    }
+    
     enum Fonts {
         static let title = UIFont(name: "HelveticaNeue", size: 30)
         static let largTitle = UIFont(name: "HelveticaNeue-Bold", size: 60)

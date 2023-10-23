@@ -11,18 +11,18 @@ import UIKit
 extension UIView {
     
     //  Set constraints
-    func anchor(top: NSLayoutYAxisAnchor?,
+    func anchor(top: NSLayoutYAxisAnchor? = nil,
                 paddingTop: CGFloat,
-                bottom: NSLayoutYAxisAnchor?,
+                bottom: NSLayoutYAxisAnchor? = nil,
                 paddingBottom: CGFloat,
-                left: NSLayoutXAxisAnchor?,
+                left: NSLayoutXAxisAnchor? = nil,
                 paddingLeft: CGFloat,
-                right: NSLayoutXAxisAnchor?,
+                right: NSLayoutXAxisAnchor? = nil,
                 paddingRight: CGFloat,
                 width: CGFloat,
                 height: CGFloat,
-                centerX: NSLayoutXAxisAnchor?,
-                centerY: NSLayoutYAxisAnchor?
+                centerX: NSLayoutXAxisAnchor? = nil,
+                centerY: NSLayoutYAxisAnchor? = nil
     ) {
         
         translatesAutoresizingMaskIntoConstraints = false
