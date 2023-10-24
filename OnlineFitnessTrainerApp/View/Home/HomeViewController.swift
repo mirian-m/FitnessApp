@@ -12,9 +12,11 @@ final class HomeViewController: UIViewController {
     // MARK:- Private properties
     private let heightConst = 220
     private var manager = HomeManager()
-    private let collectionHeader = CustomHeaderView(title: "Feature Workout")
-    private let headerForLeveView = CustomHeaderView(title: "Workout Level")
+    private let collectionHeader = HeaderView(title: "Feature Workout")
+    private let headerForLeveView = HeaderView(title: "Workout Level")
     private let levelView = LevelView()
+    private let someView = WorkOutView()
+    
     //  Create collection view programmaticaly
     private lazy var workoutCollectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
@@ -39,13 +41,22 @@ final class HomeViewController: UIViewController {
 // MARK:- Private Methods
 extension HomeViewController {
     
+    //  Configuration of UI
     private func configurationUI() {
         view.backgroundColor = Const.Colors.backgroundColorDark
-        workoutCollectionView.delegate = self
-        workoutCollectionView.dataSource = self
         navigationBarConfigure()
         addConstraints()
         bind()
+        setDelegates()
+    }
+    
+    //  Sets delegats
+    private func setDelegates() {
+        levelView.delegate = self
+        collectionHeader.delegate = self
+        headerForLeveView.delegate = self
+        workoutCollectionView.delegate = self
+        workoutCollectionView.dataSource = self
     }
     
     //  Configuration of navigation bar
@@ -89,7 +100,7 @@ extension HomeViewController {
     }
 }
 
-// MARK:- Extension Delegate & Datasource methods
+// MARK:- Extension Collection view Delegate & Datasource methods
 extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int { 1 }
     
@@ -97,10 +108,12 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: WorkoutCollectionViewCell.identifier, for: indexPath) as? WorkoutCollectionViewCell else { return UICollectionViewCell() }
+        
         return cell
     }
 }
 
+// MARK:- Add constreints Extension
 extension HomeViewController {
     
     private func addConstraints() {
@@ -109,17 +122,20 @@ extension HomeViewController {
         view.addSubview(workoutCollectionView)
         view.addSubview(headerForLeveView)
         view.addSubview(levelView)
+        view.addSubview(someView)
         
         //  Prepare for adding constraints
         collectionHeader.translatesAutoresizingMaskIntoConstraints = false
         workoutCollectionView.translatesAutoresizingMaskIntoConstraints = false
         headerForLeveView.translatesAutoresizingMaskIntoConstraints = false
         levelView.translatesAutoresizingMaskIntoConstraints = false
+        someView.translatesAutoresizingMaskIntoConstraints = false
         
         //  Collection Header add constraints
         collectionHeader.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 20).isActive = true
         collectionHeader.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 10).isActive = true
         collectionHeader.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        collectionHeader.heightAnchor.constraint(equalToConstant: 20).isActive = true
         
         //  CollectionView add constraints
         workoutCollectionView.topAnchor.constraint(equalTo: collectionHeader.bottomAnchor).isActive = true
@@ -131,11 +147,34 @@ extension HomeViewController {
         headerForLeveView.leadingAnchor.constraint(equalTo: collectionHeader.leadingAnchor).isActive = true
         headerForLeveView.topAnchor.constraint(equalTo: workoutCollectionView.bottomAnchor).isActive = true
         headerForLeveView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        headerForLeveView.heightAnchor.constraint(equalToConstant: 20).isActive = true
         
         //  Level view add constraints
-        levelView.leadingAnchor.constraint(equalTo: collectionHeader.leadingAnchor).isActive = true
-        levelView.topAnchor.constraint(equalTo: headerForLeveView.bottomAnchor, constant: 15).isActive = true
+        levelView.leadingAnchor.constraint(equalTo: headerForLeveView.leadingAnchor).isActive = true
+        levelView.topAnchor.constraint(equalTo: headerForLeveView.bottomAnchor, constant: 20).isActive = true
         levelView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         levelView.heightAnchor.constraint(equalToConstant: 30).isActive = true
+        
+        //  Level view add constraints
+        someView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
+        someView.topAnchor.constraint(equalTo: levelView.bottomAnchor, constant: 15).isActive = true
+        someView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        someView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -20).isActive = true
     }
+}
+
+// MARK:- LevelViewDelegat Protocol extensions
+extension HomeViewController: LevelViewDelegate {
+    
+    func levelButtonWasTapped(_ button: UIButton) {
+        print((button.currentTitle ?? "") as String)
+    }
+}
+
+extension HomeViewController: HeaderViewDelegate {
+    func seeAllButtonsWasTapped() {
+        print("All buttons tapped")
+    }
+    
+    
 }

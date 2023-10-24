@@ -19,6 +19,7 @@ final class TabBarViewController: UITabBarController {
 extension TabBarViewController {
     
     private func congfiguration() {
+        tabBar.isTranslucent = true
         addViewControllersToTabbar()
     }
     private func addViewControllersToTabbar() {

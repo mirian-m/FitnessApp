@@ -7,7 +7,17 @@
 
 import UIKit
 
+protocol LevelViewDelegate: AnyObject {
+    func levelButtonWasTapped(_ button: UIButton)
+}
+
 final class LevelView: UIView {
+    
+    // MARK:- Properties
+    weak var delegate: LevelViewDelegate!
+    private var tappedButton: UIButton?
+    
+    // MARK:- Outlets
     private lazy var begginerLevelBtn: UIButton = {
         let btn = UIButton()
         btn.setTitle("Begginer", for: .normal)
@@ -15,6 +25,7 @@ final class LevelView: UIView {
         btn.layer.borderColor = Const.Colors.tintColorHighlight.cgColor
         btn.titleLabel?.font = UIFont(name: Const.FontFemily.helvetica, size: 12)
         btn.layer.cornerRadius = Const.Radius.cornerRadiusForButton
+        btn.addTarget(self, action: #selector(levelButtonTapped), for: .allTouchEvents)
         return btn
     }()
     
@@ -25,9 +36,10 @@ final class LevelView: UIView {
         btn.layer.borderColor = Const.Colors.tintColorHighlight.cgColor
         btn.titleLabel?.font = UIFont(name: Const.FontFemily.helvetica, size: 12)
         btn.layer.cornerRadius = Const.Radius.cornerRadiusForButton
+        btn.addTarget(self, action: #selector(levelButtonTapped), for: .allTouchEvents)
         return btn
     }()
-
+    
     private lazy var advancedLevelBtn: UIButton = {
         let btn = UIButton()
         btn.setTitle("Advanced", for: .normal)
@@ -35,11 +47,12 @@ final class LevelView: UIView {
         btn.layer.borderColor = Const.Colors.tintColorHighlight.cgColor
         btn.titleLabel?.font = UIFont(name: Const.FontFemily.helvetica, size: 12)
         btn.layer.cornerRadius = Const.Radius.cornerRadiusForButton
+        btn.addTarget(self, action: #selector(levelButtonTapped), for: .allTouchEvents)
         return btn
     }()
-
+    
     private lazy var levelStackView: UIStackView = {
-       let stackView = UIStackView()
+        let stackView = UIStackView()
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.distribution = .fillEqually
         stackView.spacing = 10
@@ -51,6 +64,11 @@ final class LevelView: UIView {
         return stackView
     }()
     
+    convenience init(delegate: LevelViewDelegate) {
+        self.init()
+        self.delegate = delegate
+    }
+    
     override func layoutSubviews() {
         super.layoutSubviews()
         adjustaConstraints()
@@ -58,10 +76,23 @@ final class LevelView: UIView {
 }
 
 extension LevelView {
+    
+    // MARK:- Private methods
     private func adjustaConstraints() {
         levelStackView.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
         levelStackView.topAnchor.constraint(equalTo: topAnchor).isActive = true
         levelStackView.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
         levelStackView.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
     }
+    
+    // MARK:- Level Button Method
+    @objc private func levelButtonTapped(_ sender: UIButton) {
+        if tappedButton != sender {
+            tappedButton?.backgroundColor = .clear
+            sender.backgroundColor = Const.Colors.highlightBackgroundColor
+            tappedButton = sender
+            delegate.levelButtonWasTapped(tappedButton!)
+        }
+    }
 }
+

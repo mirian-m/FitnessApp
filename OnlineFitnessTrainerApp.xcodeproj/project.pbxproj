@@ -59,8 +59,9 @@
 		849C6EDE2A49E4B8004A465B /* WelcomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849C6EDD2A49E4B8004A465B /* WelcomView.swift */; };
 		849C6EE72A4AF9A6004A465B /* Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 849C6EE62A4AF9A6004A465B /* Screen.storyboard */; };
 		84B98C002AE3DAE800A58AB7 /* WorkoutCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B98BFF2AE3DAE800A58AB7 /* WorkoutCollectionViewCell.swift */; };
-		84B98C062AE562BD00A58AB7 /* CustomHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B98C052AE562BC00A58AB7 /* CustomHeaderView.swift */; };
+		84B98C062AE562BD00A58AB7 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B98C052AE562BC00A58AB7 /* HeaderView.swift */; };
 		84B98C0E2AE6682900A58AB7 /* LevelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B98C0D2AE6682800A58AB7 /* LevelView.swift */; };
+		84B98C112AE7ADBE00A58AB7 /* WorkOutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B98C102AE7ADBD00A58AB7 /* WorkOutView.swift */; };
 		E3D7AE96F3FFF64211A61CD7 /* Pods_OnlineFitnessTrainerApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1642166A91F20E737522B1C0 /* Pods_OnlineFitnessTrainerApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -121,8 +122,9 @@
 		849C6EDD2A49E4B8004A465B /* WelcomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomView.swift; sourceTree = "<group>"; };
 		849C6EE62A4AF9A6004A465B /* Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Screen.storyboard; sourceTree = "<group>"; };
 		84B98BFF2AE3DAE800A58AB7 /* WorkoutCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutCollectionViewCell.swift; sourceTree = "<group>"; };
-		84B98C052AE562BC00A58AB7 /* CustomHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomHeaderView.swift; sourceTree = "<group>"; };
+		84B98C052AE562BC00A58AB7 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		84B98C0D2AE6682800A58AB7 /* LevelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelView.swift; sourceTree = "<group>"; };
+		84B98C102AE7ADBD00A58AB7 /* WorkOutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkOutView.swift; sourceTree = "<group>"; };
 		CAF1A7BC75E368DD3C1C2FC7 /* Pods-OnlineFitnessTrainerApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OnlineFitnessTrainerApp.release.xcconfig"; path = "Target Support Files/Pods-OnlineFitnessTrainerApp/Pods-OnlineFitnessTrainerApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -612,8 +614,9 @@
 		84B98C042AE5628E00A58AB7 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				84B98C052AE562BC00A58AB7 /* CustomHeaderView.swift */,
+				84B98C052AE562BC00A58AB7 /* HeaderView.swift */,
 				84B98C0D2AE6682800A58AB7 /* LevelView.swift */,
+				84B98C102AE7ADBD00A58AB7 /* WorkOutView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -787,10 +790,11 @@
 				84680C562A4EF5BB00BC05F6 /* CustomView.swift in Sources */,
 				84680D012A66C8CB00BC05F6 /* SignUpViewController.swift in Sources */,
 				84680C452A4E199A00BC05F6 /* Protocols.swift in Sources */,
-				84B98C062AE562BD00A58AB7 /* CustomHeaderView.swift in Sources */,
+				84B98C062AE562BD00A58AB7 /* HeaderView.swift in Sources */,
 				849C6EDE2A49E4B8004A465B /* WelcomView.swift in Sources */,
 				84680C4A2A4ED46F00BC05F6 /* UserDataService.swift in Sources */,
 				84680CD92A5FEA5900BC05F6 /* Errors.swift in Sources */,
+				84B98C112AE7ADBE00A58AB7 /* WorkOutView.swift in Sources */,
 				849C6EC12A49E257004A465B /* AppDelegate.swift in Sources */,
 				84680CCA2A5ED49100BC05F6 /* ProfileViewModel.swift in Sources */,
 				849C6EC32A49E257004A465B /* SceneDelegate.swift in Sources */,

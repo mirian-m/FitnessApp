@@ -18,8 +18,9 @@ struct WorkOutModel: Codable {
 }
 
 enum Difficulty: String, Codable {
-    case beginner = "beginner"
-    case intermediate = "intermediate"
+    case beginner = "Beginner"
+    case intermediate = "Intermediate"
+    case advanced = "Advanced"
 }
 
 enum Muscle: String, Codable {
