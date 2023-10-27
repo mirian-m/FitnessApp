@@ -143,8 +143,8 @@ extension WorkOutView {
 }
 
 extension WorkOutView {
-    func setViewOutlets(_ model: String) {
-//        TODO:- Set outlets
+    func setViewOutlets(_ model: WorkoutModel) {
+        workOutLevelLabel.text = model.difficulty
     }
 }
 

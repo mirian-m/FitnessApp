@@ -29,7 +29,7 @@ final class WorkoutCollectionViewCell: UICollectionViewCell {
 }
 
 extension WorkoutCollectionViewCell {
-    func cellConfiguration(_ model: String) {
+    func cellConfiguration(_ model: WorkoutModel) {
         workOutViewForCell.setViewOutlets(model)
     }
 }

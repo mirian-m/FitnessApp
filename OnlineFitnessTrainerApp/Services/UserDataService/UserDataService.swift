@@ -7,7 +7,7 @@
 
 import UIKit
 
-// Create userManager class us singlton design pattern
+// Create userManager class use singlton design pattern
 final class UserDataService: UpdatebleProtocol {
     static let shared = UserDataService()
     private var user = User()

@@ -79,4 +79,11 @@ enum Const {
         static let baseUrl = "https://api.api-ninjas.com/v1/exercises?"
         static let APIKey = "fdxc4b8DadzBBEg9YirSRQ==L3Ej6hCAtN2hk3r8"
     }
+    
+    enum GetIn {
+        static let faceBook = "faceBookSignIn"
+        static let google = "googleSignIn"
+        static let apple = "appleSignIn"
+        static let emailPassword = "emailPasswordSignIn"
+    }
 }

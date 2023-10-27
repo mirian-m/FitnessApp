@@ -8,7 +8,7 @@
 import Foundation
 
 struct HomeManager {
-    var workOuts: ObservableObject<[WorkOutModel]> = ObservableObject([])
+    var workOuts: ObservableObject<[WorkoutModel]> = ObservableObject([])
     
     private var urlRequest: URLRequest? {
         guard let muscle = "cardio".addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed),
@@ -30,5 +30,9 @@ struct HomeManager {
                 }
             }
         }
+    }
+    func getWorkoutBy(_ level: String) -> WorkoutModel? {
+        let  k = workOuts.value?.filter({ $0.difficulty?.lowercased() == level.lowercased() }).first
+        return k
     }
 }

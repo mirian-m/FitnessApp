@@ -20,7 +20,7 @@ final class LevelView: UIView {
     // MARK:- Outlets
     private lazy var begginerLevelBtn: UIButton = {
         let btn = UIButton()
-        btn.setTitle("Begginer", for: .normal)
+        btn.setTitle("Beginner", for: .normal)
         btn.layer.borderWidth = 1.5
         btn.layer.borderColor = Const.Colors.tintColorHighlight.cgColor
         btn.titleLabel?.font = UIFont(name: Const.FontFemily.helvetica, size: 12)
@@ -42,7 +42,7 @@ final class LevelView: UIView {
     
     private lazy var advancedLevelBtn: UIButton = {
         let btn = UIButton()
-        btn.setTitle("Advanced", for: .normal)
+        btn.setTitle("Expert", for: .normal)
         btn.layer.borderWidth = 1.5
         btn.layer.borderColor = Const.Colors.tintColorHighlight.cgColor
         btn.titleLabel?.font = UIFont(name: Const.FontFemily.helvetica, size: 12)

@@ -27,7 +27,7 @@ final class GetInView: UIView {
     private lazy var facebookBtn: UIButton = {
         let btn = UIButton()
         btn.translatesAutoresizingMaskIntoConstraints = false
-        btn.accessibilityIdentifier = GetInWith.faceBook
+        btn.accessibilityIdentifier = Const.GetIn.faceBook
         btn.addTarget(self, action: #selector(accountButtonPressd), for: .touchUpInside)
         btn.buttonSet(Const.Icon.facebookIcon, "Continue with Facebook")
         btn.backgroundColor = Const.Colors.backgroundColorLightDark
@@ -41,7 +41,7 @@ final class GetInView: UIView {
     private lazy var googleBtn: UIButton = {
         let btn = UIButton()
         btn.translatesAutoresizingMaskIntoConstraints = false
-        btn.accessibilityIdentifier = GetInWith.google
+        btn.accessibilityIdentifier = Const.GetIn.google
         btn.addTarget(self, action: #selector(accountButtonPressd), for: .touchUpInside)
         btn.buttonSet(Const.Icon.googleIcon, "Continue with Google")
         btn.backgroundColor = Const.Colors.backgroundColorLightDark
@@ -54,7 +54,7 @@ final class GetInView: UIView {
     private lazy var appelBtn: UIButton = {
         let btn = UIButton()
         btn.translatesAutoresizingMaskIntoConstraints = false
-        btn.accessibilityIdentifier = GetInWith.apple
+        btn.accessibilityIdentifier = Const.GetIn.apple
         btn.addTarget(self, action: #selector(accountButtonPressd), for: .touchUpInside)
         btn.buttonSet(Const.Icon.appleIcon, "Continue with Apple")
         btn.backgroundColor = Const.Colors.backgroundColorLightDark
@@ -78,7 +78,6 @@ final class GetInView: UIView {
         return stackView
     }()
     
-    
     private lazy var signInBtn: UIButton = {
         let btn = UIButton()
         btn.translatesAutoresizingMaskIntoConstraints = false
@@ -86,7 +85,7 @@ final class GetInView: UIView {
         btn.backgroundColor = Const.Colors.highlightBackgroundColor
         btn.titleLabel?.font = Const.Fonts.subTitle
         btn.layer.cornerRadius = 20
-        btn.accessibilityIdentifier = GetInWith.emailPassword
+        btn.accessibilityIdentifier = Const.GetIn.emailPassword
         btn.addTarget(self, action: #selector(accountButtonPressd), for: .touchUpInside)
         addSubview(btn)
         return btn
@@ -194,7 +193,6 @@ extension GetInView {
             accountBtnsStackView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 20),
             accountBtnsStackView.heightAnchor.constraint(equalToConstant: 160)
         ]
-        
         
         let separatorViewConstraints = [
             separatorView.leadingAnchor.constraint(equalTo: accountBtnsStackView.leadingAnchor),

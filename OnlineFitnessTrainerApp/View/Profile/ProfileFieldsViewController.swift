@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class ProfileViewController: UIViewController {
+final class ProfileFieldsViewController: UIViewController {
     
     // MARK:- Private Property
     private let profileView = ProfileView()
@@ -28,7 +28,7 @@ final class ProfileViewController: UIViewController {
 
 // MARK:- EXTESIONS
 
-extension ProfileViewController {
+extension ProfileFieldsViewController {
     // MARK:- Private Methods
     private func addCustomView() {
         
@@ -62,7 +62,7 @@ extension ProfileViewController {
     }
 }
 // MARK:- Protocol Method Extension
-extension ProfileViewController: Listener {
+extension ProfileFieldsViewController: Listener {
     func buttonPressd(_ sender: UIButton?) {
         switch sender?.currentTitle {
         case "Start":
@@ -75,7 +75,7 @@ extension ProfileViewController: Listener {
 }
 
 // MARK:- ImagePicker Methods Extension
-extension ProfileViewController {
+extension ProfileFieldsViewController {
     @objc private func changePhoto() {
         let imagePicker = UIImagePickerController()
         imagePicker.allowsEditing = true
@@ -85,7 +85,7 @@ extension ProfileViewController {
     }
 }
 
-extension ProfileViewController:  UIImagePickerControllerDelegate & UINavigationControllerDelegate {
+extension ProfileFieldsViewController:  UIImagePickerControllerDelegate & UINavigationControllerDelegate {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         guard let image = info[.editedImage] as? UIImage else { return }
         profileImage = image
@@ -95,7 +95,7 @@ extension ProfileViewController:  UIImagePickerControllerDelegate & UINavigation
 }
 
 // MARK:- Alert Extension
-extension ProfileViewController {
+extension ProfileFieldsViewController {
     private func getAlert(with errorMessage: String) {
         let alert = UIAlertController(title: "Error", message: errorMessage, preferredStyle: .alert)
         let action = UIAlertAction(title: "Ok", style: .cancel, handler: nil)

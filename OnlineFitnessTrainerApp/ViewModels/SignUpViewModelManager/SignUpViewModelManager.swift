@@ -18,17 +18,8 @@ final class SignUpViewModelManager: LogInProtocol {
         }
     }
     
-    func saveUserDataOnFireBase() {
+    func saveUserData() {
         let userData = UserDataService.shared.userInfo
-        FirebaseService.shared.save(userData.transformTo()) { result in
-            DispatchQueue.main.async { [weak self] in
-                switch result {
-                case .failure(let error):
-                    self?.error.value = error.localizedDescription
-                case .success(_):
-                    break
-                }
-            }
-        }
+        FirebaseService.shared.save(userData.transform())
     }
 }

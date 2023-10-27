@@ -10,6 +10,7 @@ import UIKit
 class LogInView: UIView {
     
     private weak var delegate: Listener?
+    
     private var viewTitle: String!
     private var signInBtnTitle: String!
     private var bottomLabelTitle: String!
@@ -88,7 +89,7 @@ class LogInView: UIView {
         btn.backgroundColor = #colorLiteral(red: 0.4197117984, green: 0.355825007, blue: 0.6711767316, alpha: 1)
         btn.titleLabel?.font = Const.Fonts.subTitle
         btn.layer.cornerRadius = 25
-        btn.accessibilityIdentifier = GetInWith.emailPassword
+        btn.accessibilityIdentifier = Const.GetIn.emailPassword
         btn.addTarget(self, action: #selector(accountButtonPressd), for: .touchUpInside)
         return btn
     }()
@@ -175,7 +176,7 @@ class LogInView: UIView {
     private lazy var facebookBtn: UIButton = {
         let btn = UIButton()
         btn.translatesAutoresizingMaskIntoConstraints = false
-        btn.accessibilityIdentifier = GetInWith.faceBook
+        btn.accessibilityIdentifier = Const.GetIn.faceBook
         btn.setImage(Const.Icon.facebookIcon, for: .normal)
         btn.backgroundColor = Const.Colors.backgroundColorLightDark
         btn.contentMode = .center
@@ -187,7 +188,7 @@ class LogInView: UIView {
     private lazy var googleBtn: UIButton = {
         let btn = UIButton()
         btn.translatesAutoresizingMaskIntoConstraints = false
-        btn.accessibilityIdentifier = GetInWith.google
+        btn.accessibilityIdentifier = Const.GetIn.google
         btn.setImage(Const.Icon.googleIcon, for: .normal)
         btn.contentMode = .center
         btn.backgroundColor = Const.Colors.backgroundColorLightDark
@@ -199,7 +200,7 @@ class LogInView: UIView {
     private lazy var appelBtn: UIButton = {
         let btn = UIButton()
         btn.translatesAutoresizingMaskIntoConstraints = false
-        btn.accessibilityIdentifier = GetInWith.apple
+        btn.accessibilityIdentifier = Const.GetIn.apple
         btn.setImage(Const.Icon.appleIcon, for: .normal)
         btn.contentMode = .center
         btn.backgroundColor = Const.Colors.backgroundColorLightDark
@@ -241,9 +242,6 @@ class LogInView: UIView {
     }()
     
     // MARK:- View Life cycle
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-    }
     
     convenience init(viewTitle: String,
                      signInBtnTitle: String,
@@ -251,7 +249,7 @@ class LogInView: UIView {
                      signUpBtnTitle: String,
                      delegate: Listener?
     ) {
-        self.init(frame: .zero)
+        self.init()
         self.delegate = delegate
         self.viewTitle = viewTitle
         self.signInBtnTitle = signInBtnTitle
@@ -259,9 +257,6 @@ class LogInView: UIView {
         self.signUpBtnTitle = signUpBtnTitle
     }
     
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
     
     override func layoutSubviews() {
         super.layoutSubviews()

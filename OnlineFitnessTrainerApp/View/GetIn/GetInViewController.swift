@@ -23,13 +23,13 @@ final class GetInViewController: UIViewController {
 extension GetInViewController: Listener {
     func buttonPressd(_ sender: UIButton?) {
         switch sender?.accessibilityIdentifier {
-        case GetInWith.faceBook:
+        case Const.GetIn.faceBook:
             print("Facebook")
-        case GetInWith.google:
+        case Const.GetIn.google:
             print("Google")
-        case GetInWith.apple:
+        case Const.GetIn.apple:
             print("Apple")
-        case GetInWith.emailPassword:
+        case Const.GetIn.emailPassword:
             navigationController?.pushViewController(LogInViewController(), animated: true)
         default:
             navigationController?.pushViewController(GenderViewController(), animated: true)

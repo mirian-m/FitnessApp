@@ -152,3 +152,23 @@ public extension UIView {
         layer.add(animation, forKey: "shake")
     }
 }
+
+extension User {
+    func transform() -> [String: Any] {
+        var tempDict = [String: Any]()
+        tempDict[Const.FStore.Fields.name] = self.name ?? ""
+        tempDict[Const.FStore.Fields.lastName] = self.lastName ?? ""
+        tempDict[Const.FStore.Fields.mail] = self.mail ?? ""
+        tempDict[Const.FStore.Fields.age] = self.age ?? 0
+        tempDict[Const.FStore.Fields.weight] = self.weight ?? 0
+        tempDict[Const.FStore.Fields.height] = self.height ?? 0
+        tempDict[Const.FStore.Fields.gender] = self.gender?.rawValue ?? ""
+        tempDict[Const.FStore.Fields.profilePicture] = self.profilePicture ?? ""
+        tempDict[Const.FStore.Fields.phoneNumber] = self.phoneNumber ?? ""
+        tempDict[Const.FStore.Fields.physicalActivityLevel] = self.physicalActivityLevel?.rawValue ?? ""
+        tempDict[Const.FStore.Fields.goal] = self.goal?.map({ $0.rawValue })
+
+        return tempDict
+    }
+
+}

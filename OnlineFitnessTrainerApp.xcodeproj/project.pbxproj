@@ -30,14 +30,13 @@
 		84680C962A53228800BC05F6 /* ObservableObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84680C952A53228800BC05F6 /* ObservableObject.swift */; };
 		84680C9D2A54426500BC05F6 /* ActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84680C9C2A54426400BC05F6 /* ActivityViewController.swift */; };
 		84680CA92A56D43000BC05F6 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84680CA82A56D43000BC05F6 /* ProfileView.swift */; };
-		84680CAD2A56DB4000BC05F6 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84680CAC2A56DB4000BC05F6 /* ProfileViewController.swift */; };
+		84680CAD2A56DB4000BC05F6 /* ProfileFieldsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84680CAC2A56DB4000BC05F6 /* ProfileFieldsViewController.swift */; };
 		84680CC32A5C4DC500BC05F6 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84680CC22A5C4DC400BC05F6 /* Extension.swift */; };
 		84680CCA2A5ED49100BC05F6 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84680CC92A5ED48F00BC05F6 /* ProfileViewModel.swift */; };
 		84680CCE2A5ED97700BC05F6 /* ProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84680CCD2A5ED97700BC05F6 /* ProfileModel.swift */; };
 		84680CD92A5FEA5900BC05F6 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84680CD82A5FEA5900BC05F6 /* Errors.swift */; };
 		84680CE12A60545A00BC05F6 /* GetInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84680CE02A60545800BC05F6 /* GetInViewController.swift */; };
 		84680CE62A60548600BC05F6 /* GetInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84680CE52A60548600BC05F6 /* GetInView.swift */; };
-		84680CED2A630D1800BC05F6 /* GetInWith.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84680CEC2A630D1600BC05F6 /* GetInWith.swift */; };
 		84680CF32A64152D00BC05F6 /* LogInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84680CF22A64152C00BC05F6 /* LogInView.swift */; };
 		84680CF72A641CAD00BC05F6 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84680CF62A641CAD00BC05F6 /* LogInViewController.swift */; };
 		84680D012A66C8CB00BC05F6 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84680D002A66C8CB00BC05F6 /* SignUpViewController.swift */; };
@@ -47,7 +46,7 @@
 		8487B7992A67E7A200C59887 /* LogInViewModelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8487B7982A67E7A200C59887 /* LogInViewModelManager.swift */; };
 		8487B7A12A68109200C59887 /* SignUpViewModelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8487B7A02A68109200C59887 /* SignUpViewModelManager.swift */; };
 		8487B7CD2A711CEE00C59887 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8487B7CC2A711CED00C59887 /* APIService.swift */; };
-		8487B7D22A715BDA00C59887 /* WorkOutModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8487B7D12A715BD900C59887 /* WorkOutModel.swift */; };
+		8487B7D22A715BDA00C59887 /* WorkoutModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8487B7D12A715BD900C59887 /* WorkoutModel.swift */; };
 		8487B7D72A715E0D00C59887 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8487B7D62A715E0D00C59887 /* HomeViewController.swift */; };
 		8487B7DC2A7295D500C59887 /* HomeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8487B7DB2A7295D300C59887 /* HomeManager.swift */; };
 		8487B7EC2A7CC76E00C59887 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8487B7EB2A7CC76D00C59887 /* TabBarViewController.swift */; };
@@ -91,14 +90,13 @@
 		84680C952A53228800BC05F6 /* ObservableObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableObject.swift; sourceTree = "<group>"; };
 		84680C9C2A54426400BC05F6 /* ActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityViewController.swift; sourceTree = "<group>"; };
 		84680CA82A56D43000BC05F6 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
-		84680CAC2A56DB4000BC05F6 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		84680CAC2A56DB4000BC05F6 /* ProfileFieldsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileFieldsViewController.swift; sourceTree = "<group>"; };
 		84680CC22A5C4DC400BC05F6 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		84680CC92A5ED48F00BC05F6 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		84680CCD2A5ED97700BC05F6 /* ProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModel.swift; sourceTree = "<group>"; };
 		84680CD82A5FEA5900BC05F6 /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
 		84680CE02A60545800BC05F6 /* GetInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetInViewController.swift; sourceTree = "<group>"; };
 		84680CE52A60548600BC05F6 /* GetInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetInView.swift; sourceTree = "<group>"; };
-		84680CEC2A630D1600BC05F6 /* GetInWith.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetInWith.swift; sourceTree = "<group>"; };
 		84680CF22A64152C00BC05F6 /* LogInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInView.swift; sourceTree = "<group>"; };
 		84680CF62A641CAD00BC05F6 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		84680D002A66C8CB00BC05F6 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
@@ -108,7 +106,7 @@
 		8487B7982A67E7A200C59887 /* LogInViewModelManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewModelManager.swift; sourceTree = "<group>"; };
 		8487B7A02A68109200C59887 /* SignUpViewModelManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModelManager.swift; sourceTree = "<group>"; };
 		8487B7CC2A711CED00C59887 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
-		8487B7D12A715BD900C59887 /* WorkOutModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkOutModel.swift; sourceTree = "<group>"; };
+		8487B7D12A715BD900C59887 /* WorkoutModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutModel.swift; sourceTree = "<group>"; };
 		8487B7D62A715E0D00C59887 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		8487B7DB2A7295D300C59887 /* HomeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeManager.swift; sourceTree = "<group>"; };
 		8487B7EB2A7CC76D00C59887 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
@@ -317,7 +315,7 @@
 			isa = PBXGroup;
 			children = (
 				84680CA72A56D40800BC05F6 /* View */,
-				84680CAC2A56DB4000BC05F6 /* ProfileViewController.swift */,
+				84680CAC2A56DB4000BC05F6 /* ProfileFieldsViewController.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -377,14 +375,6 @@
 				84680CE52A60548600BC05F6 /* GetInView.swift */,
 			);
 			path = GetInView;
-			sourceTree = "<group>";
-		};
-		84680CEB2A630CE100BC05F6 /* SignUpType */ = {
-			isa = PBXGroup;
-			children = (
-				84680CEC2A630D1600BC05F6 /* GetInWith.swift */,
-			);
-			path = SignUpType;
 			sourceTree = "<group>";
 		};
 		84680CF02A6414ED00BC05F6 /* LogIn */ = {
@@ -466,7 +456,7 @@
 		8487B7D02A715BBC00C59887 /* WorkOut */ = {
 			isa = PBXGroup;
 			children = (
-				8487B7D12A715BD900C59887 /* WorkOutModel.swift */,
+				8487B7D12A715BD900C59887 /* WorkoutModel.swift */,
 			);
 			path = WorkOut;
 			sourceTree = "<group>";
@@ -542,7 +532,6 @@
 			isa = PBXGroup;
 			children = (
 				8487B7D02A715BBC00C59887 /* WorkOut */,
-				84680CEB2A630CE100BC05F6 /* SignUpType */,
 				84680CD72A5FEA3B00BC05F6 /* ErrorModel */,
 				84680C2C2A4D898B00BC05F6 /* UserModel */,
 				84680C292A4C7B2300BC05F6 /* PageModel */,
@@ -554,7 +543,6 @@
 		849C6ED72A49E41A004A465B /* View */ = {
 			isa = PBXGroup;
 			children = (
-				8487B7EA2A7CC73900C59887 /* TabBar */,
 				849C6ED92A49E443004A465B /* Weclome */,
 				84680C142A4B177B00BC05F6 /* MainPage */,
 				84680C322A4D8E0000BC05F6 /* Gender */,
@@ -567,6 +555,7 @@
 				84680CDF2A60541F00BC05F6 /* GetIn */,
 				84680CF02A6414ED00BC05F6 /* LogIn */,
 				84680CFF2A66C89300BC05F6 /* SignUp */,
+				8487B7EA2A7CC73900C59887 /* TabBar */,
 				8487B7D52A715DF100C59887 /* Home */,
 			);
 			path = View;
@@ -754,7 +743,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				84680CE62A60548600BC05F6 /* GetInView.swift in Sources */,
-				8487B7D22A715BDA00C59887 /* WorkOutModel.swift in Sources */,
+				8487B7D22A715BDA00C59887 /* WorkoutModel.swift in Sources */,
 				8487B7EC2A7CC76E00C59887 /* TabBarViewController.swift in Sources */,
 				84680C9D2A54426500BC05F6 /* ActivityViewController.swift in Sources */,
 				84680CA92A56D43000BC05F6 /* ProfileView.swift in Sources */,
@@ -781,12 +770,11 @@
 				84680C372A4D916700BC05F6 /* GenderView.swift in Sources */,
 				849C6EC52A49E257004A465B /* WelcomeViewController.swift in Sources */,
 				84680C2E2A4D899B00BC05F6 /* UserModel.swift in Sources */,
-				84680CED2A630D1800BC05F6 /* GetInWith.swift in Sources */,
 				84B98C0E2AE6682900A58AB7 /* LevelView.swift in Sources */,
 				84680C402A4D965E00BC05F6 /* Extensions.swift in Sources */,
 				84680CCE2A5ED97700BC05F6 /* ProfileModel.swift in Sources */,
 				84B98C002AE3DAE800A58AB7 /* WorkoutCollectionViewCell.swift in Sources */,
-				84680CAD2A56DB4000BC05F6 /* ProfileViewController.swift in Sources */,
+				84680CAD2A56DB4000BC05F6 /* ProfileFieldsViewController.swift in Sources */,
 				84680C562A4EF5BB00BC05F6 /* CustomView.swift in Sources */,
 				84680D012A66C8CB00BC05F6 /* SignUpViewController.swift in Sources */,
 				84680C452A4E199A00BC05F6 /* Protocols.swift in Sources */,

@@ -28,13 +28,16 @@ final class FirebaseService {
         }
     }
     
-    func save(_ data: [String: Any], completion: @escaping (Result<Any?, Error>) -> Void) {
-        self.db.collection(Const.FStore.collection).addDocument(data: data) { error in
-            if let err = error {
-                completion(.failure(err))
-            } else {
-                completion(.success("Document successfully written!"))
-            }
+    func save(_ data: [String: Any]) {
+        guard let signInedUserId = Auth.auth().currentUser?.uid else { return }
+        db.collection(Const.FStore.collection).document(signInedUserId).setData(data)
+    }
+    
+    func getLoginedUserData() {
+        guard let userId = Auth.auth().currentUser?.uid else { return }
+        db.collection(Const.FStore.collection).document(userId).getDocument { snapshot, error in
+            //FIXME:-  Transform in user data model
+            print(snapshot?.data() as Any)
         }
     }
 }

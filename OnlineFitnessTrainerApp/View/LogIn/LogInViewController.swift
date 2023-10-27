@@ -33,7 +33,7 @@ final class LogInViewController: UIViewController, Listener {
     private func bind() {
         manager.error.bind { [weak self] error in
             if error == nil {
-                self?.navigationController?.pushViewController(UIViewController(), animated: true)
+                self?.navigationController?.pushViewController(TabBarViewController(), animated: true)
             } else if error != "" {
                 self?.loginView.animateTextFields()
                 self?.loginView.updateErrorLb(error!)
@@ -43,16 +43,16 @@ final class LogInViewController: UIViewController, Listener {
     
     func buttonPressd(_ sender: UIButton?) {
         switch sender?.accessibilityIdentifier {
-        case GetInWith.apple:
+        case Const.GetIn.apple:
             manager.logInWithApple()
-        case GetInWith.faceBook:
+        case Const.GetIn.faceBook:
             manager.logInWithFacebook()
-        case GetInWith.google:
+        case Const.GetIn.google:
             manager.logInWithGoogle()
-        case GetInWith.emailPassword:
+        case Const.GetIn.emailPassword:
             manager.logInWith(email: loginView.getEmali() ?? "", password: loginView.getPassword() ?? "")
         default:
-            navigationController?.pushViewController(SignUpViewController(), animated: true)
+            navigationController?.pushViewController(GenderViewController(), animated: true)
         }
     }
     

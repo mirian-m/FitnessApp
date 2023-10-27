@@ -8,7 +8,7 @@
 import Foundation
 
 // MARK: - Element
-struct WorkOutModel: Codable {
+struct WorkoutModel: Codable {
     let name: String?
     let type: String?
     let muscle: String?
@@ -20,7 +20,7 @@ struct WorkOutModel: Codable {
 enum Difficulty: String, Codable {
     case beginner = "Beginner"
     case intermediate = "Intermediate"
-    case advanced = "Advanced"
+    case advanced = "Expert"
 }
 
 enum Muscle: String, Codable {

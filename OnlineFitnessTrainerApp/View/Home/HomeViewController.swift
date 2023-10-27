@@ -15,7 +15,7 @@ final class HomeViewController: UIViewController {
     private let collectionHeader = HeaderView(title: "Feature Workout")
     private let headerForLeveView = HeaderView(title: "Workout Level")
     private let levelView = LevelView()
-    private let someView = WorkOutView()
+    private let workoutTemplate = WorkOutView()
     
     //  Create collection view programmaticaly
     private lazy var workoutCollectionView: UICollectionView = {
@@ -81,7 +81,7 @@ extension HomeViewController {
             UIBarButtonItem(image: Const.Icon.bookmarkIcon
                                 .withConfiguration(UIImage.SymbolConfiguration(pointSize: 13))
                                 .withTintColor(.white, renderingMode: .alwaysOriginal),
-                            style: .done, target: self, action: nil),
+                            style: .done, target: self, action: #selector(bookmarkButtonPressed)),
             
             UIBarButtonItem(image: Const.Icon.bellIcon
                                 .withConfiguration(UIImage.SymbolConfiguration(pointSize: 13))
@@ -94,8 +94,8 @@ extension HomeViewController {
     
     // MARK:- Bind method
     private func bind() {
-        manager.workOuts.bind { workOutPlan in
-            print(workOutPlan?.first?.difficulty! ?? "")
+        manager.workOuts.bind { [weak self] workOutPlan in
+            self?.workoutCollectionView.reloadData()
         }
     }
 }
@@ -122,14 +122,14 @@ extension HomeViewController {
         view.addSubview(workoutCollectionView)
         view.addSubview(headerForLeveView)
         view.addSubview(levelView)
-        view.addSubview(someView)
+        view.addSubview(workoutTemplate)
         
         //  Prepare for adding constraints
         collectionHeader.translatesAutoresizingMaskIntoConstraints = false
         workoutCollectionView.translatesAutoresizingMaskIntoConstraints = false
         headerForLeveView.translatesAutoresizingMaskIntoConstraints = false
         levelView.translatesAutoresizingMaskIntoConstraints = false
-        someView.translatesAutoresizingMaskIntoConstraints = false
+        workoutTemplate.translatesAutoresizingMaskIntoConstraints = false
         
         //  Collection Header add constraints
         collectionHeader.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 20).isActive = true
@@ -156,10 +156,10 @@ extension HomeViewController {
         levelView.heightAnchor.constraint(equalToConstant: 30).isActive = true
         
         //  Level view add constraints
-        someView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
-        someView.topAnchor.constraint(equalTo: levelView.bottomAnchor, constant: 15).isActive = true
-        someView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        someView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -20).isActive = true
+        workoutTemplate.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
+        workoutTemplate.topAnchor.constraint(equalTo: levelView.bottomAnchor, constant: 15).isActive = true
+        workoutTemplate.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        workoutTemplate.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -20).isActive = true
     }
 }
 
@@ -167,14 +167,18 @@ extension HomeViewController {
 extension HomeViewController: LevelViewDelegate {
     
     func levelButtonWasTapped(_ button: UIButton) {
-        print((button.currentTitle ?? "") as String)
+        guard let level = button.currentTitle, let model = manager.getWorkoutBy(level) else { return }
+        workoutTemplate.setViewOutlets(model)
+    }
+    
+    @objc private func bookmarkButtonPressed() {
+        // TODO:- Navigate to bookmark view Controller
     }
 }
 
 extension HomeViewController: HeaderViewDelegate {
     func seeAllButtonsWasTapped() {
-        print("All buttons tapped")
+        // TODO:- Navigate to Workout level view Constroller
+        navigationController?.pushViewController(UIViewController(), animated: true)
     }
-    
-    
 }

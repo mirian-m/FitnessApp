@@ -57,7 +57,7 @@ final class ActivityViewController: UIViewController, Listener {
             if let title = pressedButton?.currentTitle, let level = ActivityLevel(rawValue: title)  {
                 UserDataService.shared.updatePhysicalActivity(level)
             }
-            self.navigationController?.pushViewController(ProfileViewController(), animated: true)
+            self.navigationController?.pushViewController(ProfileFieldsViewController(), animated: true)
         }
     }
 }
