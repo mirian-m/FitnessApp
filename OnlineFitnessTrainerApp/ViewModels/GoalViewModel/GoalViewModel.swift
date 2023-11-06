@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class GoalDataManager {
+final class GoalViewModel {
     private lazy var goals = Goal.allCases.map { $0.rawValue }
     
     //  Observable Object property

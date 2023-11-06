@@ -10,8 +10,9 @@ import UIKit
 final class HomeViewController: UIViewController {
     
     // MARK:- Private properties
-    private let heightConst = 220
-    private var manager = HomeManager()
+    private let heightConst = UIScreen.main.bounds.height * 0.3
+    
+    private var manager = HomeViewModel()
     private let collectionHeader = HeaderView(title: "Feature Workout")
     private let headerForLeveView = HeaderView(title: "Workout Level")
     private let levelView = LevelView()
@@ -20,7 +21,7 @@ final class HomeViewController: UIViewController {
     //  Create collection view programmaticaly
     private lazy var workoutCollectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
-        layout.itemSize = CGSize(width: Int(view.frame.width), height: heightConst)
+        layout.itemSize = CGSize(width: Int(view.frame.width), height: Int(heightConst))
         layout.scrollDirection = .horizontal
         let collectionView = UICollectionView(frame: CGRect(), collectionViewLayout: layout)
         collectionView.register(WorkoutCollectionViewCell.self,
@@ -35,7 +36,9 @@ final class HomeViewController: UIViewController {
         super.viewDidLoad()
         configurationUI()
         manager.fetchData()
+        print(UIScreen.main.bounds.height)
     }
+    
 }
 
 // MARK:- Private Methods
@@ -61,23 +64,19 @@ extension HomeViewController {
     
     //  Configuration of navigation bar
     private func navigationBarConfigure() {
-        navigationController?.setNavigationBarHidden(false, animated: true)
-        tabBarController?.navigationController?.navigationBar.isHidden = false
-        navigationController?.navigationBar.tintColor = .clear
-        
         //  Create image for logo
         let image = Const.Icon.goFitIcon
-        
+
         let customBtn = UIButton()
-        customBtn.buttonSet(image, "GoFit")
-        
+        customBtn.updateButton(with: image, and: "Gofit")
+
         let btn = UIBarButtonItem(customView: customBtn)
-        
+        customBtn.titleLabel?.font = UIFont(name: Const.FontFemily.Helvetica.normal, size: 16)
         //  Set left bar button
-        tabBarController?.navigationItem.setLeftBarButton(btn, animated: true)
-        
+        self.navigationItem.setLeftBarButton(btn, animated: true)
+
         //  Set Right bar buttons
-        tabBarController?.navigationItem.setRightBarButtonItems([
+        self.navigationItem.setRightBarButtonItems([
             UIBarButtonItem(image: Const.Icon.bookmarkIcon
                                 .withConfiguration(UIImage.SymbolConfiguration(pointSize: 13))
                                 .withTintColor(.white, renderingMode: .alwaysOriginal),
@@ -89,7 +88,8 @@ extension HomeViewController {
                             style: .done, target: self, action: nil)
         ], animated: true)
         
-        tabBarController?.navigationItem.title = "Hello 'Name' 👋"
+        self.navigationItem.title = "Hello 'Name' 👋"
+        navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.font: UIFont(name: Const.FontFemily.Helvetica.bold, size: 18)!]
     }
     
     // MARK:- Bind method
@@ -132,7 +132,7 @@ extension HomeViewController {
         workoutTemplate.translatesAutoresizingMaskIntoConstraints = false
         
         //  Collection Header add constraints
-        collectionHeader.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 20).isActive = true
+        collectionHeader.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 15).isActive = true
         collectionHeader.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 10).isActive = true
         collectionHeader.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         collectionHeader.heightAnchor.constraint(equalToConstant: 20).isActive = true
@@ -151,7 +151,7 @@ extension HomeViewController {
         
         //  Level view add constraints
         levelView.leadingAnchor.constraint(equalTo: headerForLeveView.leadingAnchor).isActive = true
-        levelView.topAnchor.constraint(equalTo: headerForLeveView.bottomAnchor, constant: 20).isActive = true
+        levelView.topAnchor.constraint(equalTo: headerForLeveView.bottomAnchor, constant: 15).isActive = true
         levelView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         levelView.heightAnchor.constraint(equalToConstant: 30).isActive = true
         
@@ -178,7 +178,7 @@ extension HomeViewController: LevelViewDelegate {
 
 extension HomeViewController: HeaderViewDelegate {
     func seeAllButtonsWasTapped() {
-        // TODO:- Navigate to Workout level view Constroller
+        // TODO:- Navigate to Workout level view Conntroller
         navigationController?.pushViewController(UIViewController(), animated: true)
     }
 }

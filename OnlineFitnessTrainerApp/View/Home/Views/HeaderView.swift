@@ -20,7 +20,7 @@ final class HeaderView: UIView {
         let lb = UILabel()
         lb.translatesAutoresizingMaskIntoConstraints = false
         lb.textColor = .white
-        lb.font = UIFont(name: Const.FontFemily.helvetica, size: 12)
+        lb.font = UIFont(name: Const.FontFemily.Helvetica.normal, size: 12)
         addSubview(lb)
         return lb
     }()

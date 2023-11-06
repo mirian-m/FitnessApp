@@ -23,7 +23,7 @@ final class LevelView: UIView {
         btn.setTitle("Beginner", for: .normal)
         btn.layer.borderWidth = 1.5
         btn.layer.borderColor = Const.Colors.tintColorHighlight.cgColor
-        btn.titleLabel?.font = UIFont(name: Const.FontFemily.helvetica, size: 12)
+        btn.titleLabel?.font = UIFont(name: Const.FontFemily.Helvetica.normal, size: 12)
         btn.layer.cornerRadius = Const.Radius.cornerRadiusForButton
         btn.addTarget(self, action: #selector(levelButtonTapped), for: .allTouchEvents)
         return btn
@@ -34,7 +34,7 @@ final class LevelView: UIView {
         btn.setTitle("Intermediate", for: .normal)
         btn.layer.borderWidth = 1.5
         btn.layer.borderColor = Const.Colors.tintColorHighlight.cgColor
-        btn.titleLabel?.font = UIFont(name: Const.FontFemily.helvetica, size: 12)
+        btn.titleLabel?.font = UIFont(name: Const.FontFemily.Helvetica.normal, size: 12)
         btn.layer.cornerRadius = Const.Radius.cornerRadiusForButton
         btn.addTarget(self, action: #selector(levelButtonTapped), for: .allTouchEvents)
         return btn
@@ -45,7 +45,7 @@ final class LevelView: UIView {
         btn.setTitle("Expert", for: .normal)
         btn.layer.borderWidth = 1.5
         btn.layer.borderColor = Const.Colors.tintColorHighlight.cgColor
-        btn.titleLabel?.font = UIFont(name: Const.FontFemily.helvetica, size: 12)
+        btn.titleLabel?.font = UIFont(name: Const.FontFemily.Helvetica.normal, size: 12)
         btn.layer.cornerRadius = Const.Radius.cornerRadiusForButton
         btn.addTarget(self, action: #selector(levelButtonTapped), for: .allTouchEvents)
         return btn

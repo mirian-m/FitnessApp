@@ -126,13 +126,13 @@ extension Notification.Name {
 }
 
 extension UIButton {
-    func buttonSet(_ image: UIImage, _ title: String = "") {
+    func updateButton(with image: UIImage, and title: String = "", padding: CGFloat = 10) {
         setImage(image, for: .normal)
         if title != "" {
             setTitle(title, for: .normal)
         }
-        imageEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 10)
-        titleEdgeInsets = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 0)
+        imageEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: padding)
+        titleEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
         contentHorizontalAlignment = .center
         imageView?.contentMode = .scaleAspectFill
         self.titleLabel?.adjustsFontSizeToFitWidth = true

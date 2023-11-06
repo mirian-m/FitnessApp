@@ -10,6 +10,8 @@ import Foundation
 final class APIService {
     static let shared = APIService()
     
+    private init() {}
+    
     func fetchData(with urlRequest: URLRequest?, completion: @escaping (Result<[WorkoutModel], Error>) -> Void) {
         
         guard let urlRequest = urlRequest else { return }

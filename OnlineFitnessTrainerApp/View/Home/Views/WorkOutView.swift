@@ -105,7 +105,7 @@ extension WorkOutView {
             workoutImageView.centerXAnchor.constraint(equalTo: centerXAnchor),
             workoutImageView.centerYAnchor.constraint(equalTo: centerYAnchor),
             workoutImageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
-            workoutImageView.topAnchor.constraint(equalTo: topAnchor, constant: 20)
+            workoutImageView.topAnchor.constraint(equalTo: topAnchor, constant: 7)
         ]
         
         let workOutTitleLabelConstraints = [

@@ -10,8 +10,8 @@ import UIKit
 final class TabBarViewController: UITabBarController {
     
     // MARK:- Life Cycle Method
-    override func viewWillAppear(_ animated: Bool) {
-        super .viewWillAppear(true)
+    override func viewDidLoad() {
+        super.viewDidLoad()
         congfiguration()
     }
 }
@@ -19,17 +19,27 @@ final class TabBarViewController: UITabBarController {
 extension TabBarViewController {
     
     private func congfiguration() {
-        tabBar.isTranslucent = true
         addViewControllersToTabbar()
     }
-    private func addViewControllersToTabbar() {
-        let vc = HomeViewController()
-        vc.tabBarItem = UITabBarItem(
-            title: "",
-            image: Const.Icon.homeIcon.withTintColor(.gray, renderingMode: .alwaysOriginal),
-            selectedImage: Const.Icon.homeFillIcon.withRenderingMode(.alwaysOriginal).withTintColor(.white, renderingMode: .alwaysOriginal)
-        )
-        self.setViewControllers([vc], animated: true)
-    }
     
+    private func addViewControllersToTabbar() {
+        let home = HomeViewController()
+        let discover = DiscoverViewController()
+        
+        home.tabBarItem = UITabBarItem(
+            title: "Home",
+            image: Const.Icon.homeIcon.withTintColor(.gray, renderingMode: .alwaysOriginal),
+            selectedImage: Const.Icon.homeFillIcon
+                .withTintColor(.white, renderingMode: .alwaysOriginal)
+        )
+        
+        discover.tabBarItem = UITabBarItem(
+            title: "Discover",
+            image: UIImage(systemName: "paperplane.circle.fill"),
+            selectedImage: UIImage(systemName: "paperplane.circle.fill")?.withTintColor(.white, renderingMode: .alwaysOriginal)
+        )
+        
+        let controllers = [home, discover].map({UINavigationController(rootViewController: $0)})
+        self.setViewControllers(controllers, animated: true)
+    }
 }

@@ -9,7 +9,7 @@ import UIKit
 
 final class PageViewController: UIViewController {
     
-    fileprivate var manager = PageViewModelManager()
+    fileprivate var manager = PageViewModel()
     
     // MARK:- ViewController lifecycle
     override func loadView() {

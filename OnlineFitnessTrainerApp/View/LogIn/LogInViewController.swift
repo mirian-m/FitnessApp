@@ -17,7 +17,7 @@ final class LogInViewController: UIViewController, Listener {
         delegate: self
     )
     
-    private var manager = LogInViewModelManager()
+    private var manager = LogInViewModel()
     
     //  MARK:- ViewConstroller lifecycle
     override func loadView() {

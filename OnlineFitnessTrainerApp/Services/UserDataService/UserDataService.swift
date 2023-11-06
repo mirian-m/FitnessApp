@@ -14,6 +14,7 @@ final class UserDataService: UpdatebleProtocol {
     
     var userInfo: User { self.user }
     
+    private init() {}
     // MARK:- User Update methods
     func updateAge(_ age: Int) { self.user.age = age }
     

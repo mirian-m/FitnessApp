@@ -10,7 +10,10 @@ import UIKit
 
 enum Const {
     enum FontFemily {
-        static let helvetica = "HelveticaNeue"
+        enum Helvetica {
+            static let normal = "HelveticaNeue"
+            static let bold = "HelveticaNeue-Bold"
+        }
     }
     
     enum Fonts {
@@ -18,6 +21,7 @@ enum Const {
         static let largTitle = UIFont(name: "HelveticaNeue-Bold", size: 60)
         static let subTitle = UIFont(name: "HelveticaNeue-Bold", size: 13)
     }
+    
     enum Colors {
         static let highlightBackgroundColor = #colorLiteral(red: 0.4064723253, green: 0.2563842833, blue: 1, alpha: 1)
         static let backgroundColorDark = #colorLiteral(red: 0.09379886836, green: 0.10151539, blue: 0.1264217198, alpha: 1)
@@ -36,13 +40,13 @@ enum Const {
         static let emailIcon = UIImage(systemName: "envelope.fill") ?? UIImage()
         static let facebookIcon = UIImage(named: "facebook-icon") ?? UIImage()
         static let googleIcon = UIImage(named: "google-icon") ?? UIImage()
-        static let appleIcon = UIImage(named: "apple-icon") ?? UIImage()
+        static let appleIcon = UIImage(systemName: "applelogo") ?? UIImage()
         static let lockIcon = UIImage(systemName: "lock") ?? UIImage()
         static let hidePasswordIcon = UIImage(systemName: "eye.slash.fill") ?? UIImage()
         static let showPasswordIcon = UIImage(systemName: "eye.fill") ?? UIImage()
         static let homeIcon = UIImage(systemName: "house") ?? UIImage()
         static let homeFillIcon = UIImage(systemName: "house.fill") ?? UIImage()
-        static let goFitIcon = UIImage(named: "hantel") ?? UIImage()
+        static let goFitIcon = UIImage(named: "hantelImage") ?? UIImage()
         static let bellIcon = UIImage(systemName: "bell") ?? UIImage()
         static let bellFillIcon = UIImage(systemName: "bell.fill") ?? UIImage()
         static let bookmarkIcon = UIImage(systemName: "bookmark") ?? UIImage()

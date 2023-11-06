@@ -76,7 +76,7 @@ class LogInView: UIView {
     private lazy var rememberBtn: UIButton = {
         let btn = UIButton()
         btn.translatesAutoresizingMaskIntoConstraints = false
-        btn.buttonSet(Const.Icon.squareIcon.withTintColor(Const.Colors.tintColorHighlight, renderingMode: .alwaysOriginal), "Remember me")
+        btn.updateButton(with: Const.Icon.squareIcon.withTintColor(Const.Colors.tintColorHighlight, renderingMode: .alwaysOriginal), and: "Remember me")
         btn.titleLabel?.font = Const.Fonts.subTitle
         btn.addTarget(self, action: #selector(rememberBtnTapped), for: .touchUpInside)
         return btn
@@ -418,11 +418,11 @@ extension LogInView {
     @objc private func rememberBtnTapped(_ sender: UIButton) {
         switch sender.tag {
         case 1:
-            sender.buttonSet(Const.Icon.squareIcon
+            sender.updateButton(with: Const.Icon.squareIcon
                                 .withTintColor(Const.Colors.tintColorHighlight, renderingMode: .alwaysOriginal))
             sender.tag = 0
         case 0:
-            sender.buttonSet(Const.Icon.checkMarkIcon
+            sender.updateButton(with: Const.Icon.checkMarkIcon
                                 .withTintColor(Const.Colors.tintColorHighlight, renderingMode: .alwaysOriginal))
             sender.tag = 1
         default:

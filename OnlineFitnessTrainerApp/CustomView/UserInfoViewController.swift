@@ -8,7 +8,6 @@ import UIKit
 
 class UserInfoViewController: UIViewController, Listener {
     
-    // MARK:- Private properties
     private lazy var pickerView: UIPickerView = {
         let pickView = UIPickerView()
         pickView.backgroundColor = .clear
@@ -16,9 +15,10 @@ class UserInfoViewController: UIViewController, Listener {
         return pickView
     }()
     
+    // MARK:- Private properties
     private var viewConstrollerTitle: String!
     private var subTitle: String!
-    private var initView: UIView?
+    private var customView: UIView?
     private var middleIndex: Int {
         dataManager.numberOfItems / 2
     }
@@ -27,7 +27,6 @@ class UserInfoViewController: UIViewController, Listener {
     public var dataManager: DataCreateManager {
         DataCreateManager()
     }
-    
     public var selectedItemIndex: Int {
         pickerView.selectedRow(inComponent: 0)
     }
@@ -47,30 +46,15 @@ class UserInfoViewController: UIViewController, Listener {
         pickerView.subviews.forEach { $0.backgroundColor = .clear }
     }
     
-    // MARK:- Init func
-    init(
-        title: String?,
-        subTitle: String?,
-        myCustomView: UIView? = nil,
-        rotationAngel: CGFloat? = 0
-    ){
+    // MARK:- Init methods
+    init(title: String?, subTitle: String?, myCustomView: UIView? = nil, rotationAngel: CGFloat? = 0) {
         super.init(nibName: nil, bundle: nil)
         
-        setOutlets(
-            title: title,
-            subTitle: subTitle,
-            view: myCustomView,
-            rotationAngel: rotationAngel
-        )
+        self.setOutlets(title: title, subTitle: subTitle, view: myCustomView, rotationAngel: rotationAngel)
     }
     
     required convenience init?(coder: NSCoder) {
-        self.init(
-            title: nil,
-            subTitle: nil,
-            myCustomView: nil,
-            rotationAngel: nil
-        )
+        self.init(title: nil, subTitle: nil, myCustomView: nil, rotationAngel: nil)
     }
     
     // MARK:- Private Methods
@@ -78,18 +62,16 @@ class UserInfoViewController: UIViewController, Listener {
         if let title = title, let subTitle = subTitle {
             self.viewConstrollerTitle = title
             self.subTitle = subTitle
-            self.initView = view
+            self.customView = view
             self.rotationAngel = rotationAngel
         }
     }
     
     // Add Custom view with Title and subtitle
     private func setCustomView() {
-        self.view = CustomView(title: viewConstrollerTitle,
-                               subTitle: subTitle,
-                               delegate: self
-        )
-        let view = initView == nil ? pickerView: initView
+        self.view = CustomView(title: viewConstrollerTitle, subTitle: subTitle, delegate: self)
+        
+        let view = customView == nil ? pickerView: customView
         
         //  downcast viewcontroller.view to CustomView
         guard let backgroundView = (self.view as? CustomView) else { return }

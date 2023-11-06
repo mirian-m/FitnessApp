@@ -7,7 +7,7 @@
 
 import Foundation
 
-final class ProfileViewModelManager {
+final class ProfileViewModel {
     
     private var profileData: ProfileModel? = ProfileModel() {
         didSet {
@@ -41,7 +41,7 @@ final class ProfileViewModelManager {
     }
 }
 
-extension ProfileViewModelManager {
+extension ProfileViewModel {
     
     // MARK:- Validation Methods
     private func checkValidationeOf(_ data: ProfileModel) -> Error? {

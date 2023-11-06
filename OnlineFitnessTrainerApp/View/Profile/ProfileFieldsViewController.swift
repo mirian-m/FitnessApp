@@ -12,7 +12,7 @@ final class ProfileFieldsViewController: UIViewController {
     // MARK:- Private Property
     private let profileView = ProfileView()
     private var profileImage: UIImage!
-    private let manager = ProfileViewModelManager()
+    private let manager = ProfileViewModel()
     
     // MARK:- View Controller Life Cycle
     override func loadView() {

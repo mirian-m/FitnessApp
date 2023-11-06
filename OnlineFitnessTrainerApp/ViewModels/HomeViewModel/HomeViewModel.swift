@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct HomeManager {
+final class HomeViewModel {
     var workOuts: ObservableObject<[WorkoutModel]> = ObservableObject([])
     
     private var urlRequest: URLRequest? {
@@ -21,10 +21,10 @@ struct HomeManager {
     
     func fetchData() {
         APIService.shared.fetchData(with: self.urlRequest) { result in
-            DispatchQueue.main.async {
+            DispatchQueue.main.async {[weak self] in
                 switch result {
                 case .success(let workoutPlan):
-                    workOuts.value = workoutPlan
+                    self?.workOuts.value = workoutPlan
                 case .failure(let error):
                     print(error)
                 }

@@ -9,7 +9,7 @@ import UIKit
 
 final class SignUpViewController: UIViewController {
     
-    private var manager = SignUpViewModelManager()
+    private var manager = SignUpViewModel()
     private lazy var signUpView = SignUpView(delegate: self)
     
     // MARK:-ViewConstorller lifecycle

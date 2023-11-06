@@ -29,7 +29,7 @@ final class GetInView: UIView {
         btn.translatesAutoresizingMaskIntoConstraints = false
         btn.accessibilityIdentifier = Const.GetIn.faceBook
         btn.addTarget(self, action: #selector(accountButtonPressd), for: .touchUpInside)
-        btn.buttonSet(Const.Icon.facebookIcon, "Continue with Facebook")
+        btn.updateButton(with: Const.Icon.facebookIcon, and: "Continue with Facebook")
         btn.backgroundColor = Const.Colors.backgroundColorLightDark
         btn.tintColor = Const.Colors.tintColorWhite
         btn.titleLabel?.font = Const.Fonts.subTitle
@@ -43,7 +43,7 @@ final class GetInView: UIView {
         btn.translatesAutoresizingMaskIntoConstraints = false
         btn.accessibilityIdentifier = Const.GetIn.google
         btn.addTarget(self, action: #selector(accountButtonPressd), for: .touchUpInside)
-        btn.buttonSet(Const.Icon.googleIcon, "Continue with Google")
+        btn.updateButton(with: Const.Icon.googleIcon, and: "Continue with Google")
         btn.backgroundColor = Const.Colors.backgroundColorLightDark
         btn.tintColor = Const.Colors.tintColorWhite
         btn.titleLabel?.font = Const.Fonts.subTitle
@@ -56,7 +56,7 @@ final class GetInView: UIView {
         btn.translatesAutoresizingMaskIntoConstraints = false
         btn.accessibilityIdentifier = Const.GetIn.apple
         btn.addTarget(self, action: #selector(accountButtonPressd), for: .touchUpInside)
-        btn.buttonSet(Const.Icon.appleIcon, "Continue with Apple")
+        btn.updateButton(with: Const.Icon.appleIcon, and: "Continue with Apple")
         btn.backgroundColor = Const.Colors.backgroundColorLightDark
         btn.tintColor = Const.Colors.tintColorWhite
         btn.titleLabel?.font = Const.Fonts.subTitle

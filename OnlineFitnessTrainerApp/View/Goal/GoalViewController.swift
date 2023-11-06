@@ -9,7 +9,7 @@ import UIKit
 
 final class GoalViewController: UserInfoViewController {
     
-    private let manager = GoalDataManager()
+    private let manager = GoalViewModel()
     
     // MARK:- Private outlets
     private var goalTableView: UITableView = {

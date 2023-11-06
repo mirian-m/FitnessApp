@@ -13,8 +13,11 @@ final class FirebaseService {
     
     // MARK:- Shared property
     static let shared = FirebaseService()
+    
     // MARK:- Private Property
     private let db = Firestore.firestore()
+    
+    private init() {}
     
     func createUserWith(email: String, password: String, completion: @escaping (Error?) -> Void) {
         Auth.auth().createUser(withEmail: email, password: password) { (_, error) in

@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct PageViewModel {
+struct PageModel {
     let imageName: String
     let text: String
     let pageIndex: Int

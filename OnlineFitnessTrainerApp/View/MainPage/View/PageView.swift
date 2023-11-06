@@ -85,7 +85,7 @@ final class PageView: UIView {
         adjustConstraints()
     }
     
-    func updateViewComponents(with viewModel: PageViewModel) {
+    func updateViewComponents(with viewModel: PageModel) {
         posterImageName = viewModel.imageName
         text = viewModel.text
         pageview.currentPage = viewModel.pageIndex
